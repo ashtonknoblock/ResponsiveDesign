@@ -10,12 +10,12 @@ body{
 }
 
 
-.masonry { /* Masonry container */
+.masonry { 
     column-count: 2;
     column-gap: 1em;
 }
 
-.item { /* Masonry bricks or child elements */
+.item { 
     display: inline-block;
     margin: 0 0 1em;
     width: 100%;
@@ -26,35 +26,50 @@ body{
     height: 100px;
     text-align: center;
     margin: 5px;
+    overflow: scroll;
 }
 
 
-
-
-
-
+/* 
+        For Desktop:
+ */
 @media screen and (min-width: 670px) {
+    
     body {
         background: green;
     }
+    
+    .container {
+        display: flex;
+        /* flex-direction: column; */
+        flex-wrap: wrap;
+        justify-content: space-around;
+        
+    }
+
     .head {
         display: flex;
         width: 250px;
         height: 400px;
-        flex-direction: column;
+        /* flex-direction: column; */
         border: 5px dashed rebeccapurple;
+        flex-wrap: wrap;
+        column-span: none;
+        justify-content: center;
+        overflow: scroll;
     }
     .masonry {
         display: flex;
         flex-wrap: wrap;
         flex: 1;
+        column-width: 250px;
+        column-gap: 1em;
     }
-    .container {
-        flex: 1;
-        flex-direction: row;
-    }
+
      .item {
          flex: 1;
+         margin: 0 0 3em;
+         display: inline-block;
      }
 
 }
