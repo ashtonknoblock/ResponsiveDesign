@@ -1,0 +1,60 @@
+
+body{
+    background: blue;
+}
+
+
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.masonry { /* Masonry container */
+    column-count: 2;
+    column-gap: 1em;
+}
+
+.item { /* Masonry bricks or child elements */
+    display: inline-block;
+    margin: 0 0 1em;
+    width: 100%;
+}
+
+.head {
+    border: 5px dashed rebeccapurple;
+    height: 100px;
+    text-align: center;
+    margin: 5px;
+}
+
+
+
+
+
+
+@media screen and (min-width: 670px) {
+    body {
+        background: green;
+    }
+    .head {
+        display: flex;
+        width: 250px;
+        height: 400px;
+        flex-direction: column;
+        border: 5px dashed rebeccapurple;
+    }
+    .masonry {
+        display: flex;
+        flex-wrap: wrap;
+        flex: 1;
+    }
+    .container {
+        flex: 1;
+        flex-direction: row;
+    }
+     .item {
+         flex: 1;
+     }
+
+}
