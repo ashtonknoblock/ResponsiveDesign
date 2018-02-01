@@ -33,18 +33,17 @@ body{
 /* 
         For Desktop:
  */
-@media screen and (min-width: 670px) {
+@media  (min-width: 670px) {
     
     body {
         background: green;
     }
     
     .container {
-        display: flex;
         /* flex-direction: column; */
         flex-wrap: wrap;
         justify-content: space-around;
-        
+        flex-direction: row;
     }
 
     .head {
@@ -70,6 +69,14 @@ body{
          flex: 1;
          margin: 0 0 3em;
          display: inline-block;
+     }
+
+     .col {
+         /* border: 4px solid yellow; */
+         flex: 1;
+         flex-direction: column;
+         flex-wrap: wrap;
+         column-width: 236px;
      }
 
 }
